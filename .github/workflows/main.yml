@@ -1,3 +1,4 @@
+
 name: "Airport Checkin"
 
 on:
@@ -12,7 +13,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     # if: github.ref == 'refs/heads/master'
-
     steps:
       - name: Checkout master
         uses: actions/checkout@v2
@@ -23,7 +23,9 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9.12
+          python-version: 3.8
+
+
 
       - name: Random sleep
         if: github.event_name == 'schedule'
@@ -36,7 +38,7 @@ jobs:
       - name: Run sign
         env:
           SCKEY: ${{ secrets.SCKEY }}
-          EMAIL: ${{ vars.EMAIL }}
-          PASSWD: ${{ vars.PASSWD }}
+          EMAIL: ${{ secrets.EMAIL }}
+          PASSWD: ${{ secrets.PASSWD }}
         run: |
           python3 ./main.py
