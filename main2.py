@@ -1,7 +1,7 @@
 import requests, json, re, os
 
 session = requests.session()
-email = os.environ.get('EMAIL')
+email = os.environ.get('EMAIL2')
 passwd = os.environ.get('PASSWD')
 
 GOTIFY_TOKEN = 'ALYjipELUpgTydf'
@@ -32,7 +32,7 @@ header = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
 }
 data = {
-    'email': email2, 
+    'email': email, 
     'passwd': passwd
 }
 
