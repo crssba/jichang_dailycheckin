@@ -3,7 +3,7 @@ import requests, json, re, os
 session = requests.session()
 email = os.environ.get('EMAIL2')
 passwd = os.environ.get('PASSWD')
-
+echo $EMAIL2
 GOTIFY_TOKEN = 'ALYjipELUpgTydf'
 GOTIFY_URL = 'https://ysewsxzmhzws.us-east-1.clawcloudrun.com/message'  # 你的Gotify服务地址
 
