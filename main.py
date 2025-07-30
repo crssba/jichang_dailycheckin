@@ -23,12 +23,12 @@ def push(content):
     else:
         print(f"Gotify 推送失败: {resp.text}")
 
-login_url = 'https://ikuuu.one/auth/login'
-check_url = 'https://ikuuu.one/user/checkin'
-info_url = 'https://ikuuu.one/user/profile'
+login_url = 'https://ikuuu.ch/auth/login'
+check_url = 'https://ikuuu.ch/user/checkin'
+info_url = 'https://ikuuu.ch/user/profile'
 
 header = {
-    'origin': 'https://ikuuu.one',
+    'origin': 'https://ikuuu.ch',
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'
 }
 data = {
